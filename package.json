@@ -13,7 +13,7 @@
     "author": "Sim",
     "license": "ISC",
     "engines": {
-        "node": "16.x.x"
+        "node": "16.13.0"
     },
     "dependencies": {
         "body-parser": "^1.19.0",
