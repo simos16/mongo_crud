@@ -4,7 +4,9 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const bodyparser = require('body-parser');
 
+
 const empController = require('./controllers/empController');
+const port = process.env.PORT || 3000
 
 var app = express();
 app.use(bodyparser.urlencoded({
@@ -25,6 +27,6 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 app.use('/employee', empController);
-app.listen(3000, () => {
-    console.log('Server in ascolto sulla porta : 3000');
+app.listen(port, () => {
+    console.log(`Server in ascolto sulla porta: ${port}`);
 });

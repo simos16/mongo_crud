@@ -5,7 +5,7 @@ const Employee = mongoose.model('empModel');
 
 router.get('/', (req, res) => {
     res.render("employee/addupdate", {
-        viewTitle: "inserisci riosrsa"
+        viewTitle: "inserisci risorsa"
     });
 });
 
@@ -33,8 +33,7 @@ function insertRecord(req, res) {
                     viewTitle: "Aggiungi risorsa",
                     employee: req.body
                 });
-            }
-            else
+            } else
                 console.log('Errore durante l\'inserimento: ' + err);
         }
     });
@@ -42,16 +41,14 @@ function insertRecord(req, res) {
 
 function updateRecord(req, res) {
     Employee.updateOne({ _id: req.body._id }, req.body, { new: true }, (err, doc) => {
-        if (!err) { res.redirect('employee/list'); }
-        else {
+        if (!err) { res.redirect('employee/list'); } else {
             if (err.name == 'ValidationError') {
                 handleValidationError(err, req.body);
                 res.render("employee/addupdate", {
                     viewTitle: 'Aggiorna',
                     employee: req.body
                 });
-            }
-            else 
+            } else
                 console.log('Errore durante l\inserimento ' + err);
         }
     });
@@ -63,8 +60,7 @@ router.get('/list', (req, res) => {
             res.render("employee/list", {
                 emplist: docs
             });
-        }
-        else {
+        } else {
             console.log('Errore nella visualizzazione' + err);
         }
     });
@@ -100,8 +96,7 @@ router.get('/delete/:id', (req, res) => {
     Employee.findByIdAndRemove(req.params.id, (err, doc) => {
         if (!err) {
             res.redirect('/employee/list');
-        }
-        else {
+        } else {
             console.log('Errore durante la rimozione' + err);
         }
     });
