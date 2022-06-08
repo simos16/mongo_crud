@@ -1,0 +1,28 @@
+{
+    "name": "demo_app",
+    "version": "1.0.0",
+    "description": "Demo app just for teaching purposes",
+    "main": "server.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "keywords": [
+        "crud",
+        "operations"
+    ],
+    "author": "Sim",
+    "license": "ISC",
+    "engines": {
+        "node": "16.x.x"
+    },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "express-handlebars": "^3.1.0",
+        "mongoose": "^5.9.2"
+    },
+    "devDependencies": {
+
+        "nodemon": "^2.0.16"
+    }
+}

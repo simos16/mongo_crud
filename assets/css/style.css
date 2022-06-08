@@ -1,0 +1,38 @@
+body {
+    font-family: 'Comfortaa', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 700;
+}
+
+.header-bg-dark {
+    background-color: #e38100!important;
+}
+
+.showcase .container {
+    min-height: 350px;
+    background-color: #efe4e4;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.footer-bg-dark {
+    background-color: #e38100!important;
+}

@@ -1,0 +1,51 @@
+<section class="showcase">
+    <div class="container">
+        <div class="pb-2 mt-4 mb-2 border-bottom">
+            <h2>Gestisci le tue risorse</h2>
+        </div>
+        <div class="row">
+            <div class="col-sm-10 offset-md-1">
+                <form action="/employee" method="POST" autocomplete="off">
+                    <input type="hidden" name="_id" value="{{employee._id}}">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Nominativo</label>
+                            <input type="text" class="form-control" name="full_name" placeholder="nome completo"
+                                value="{{employee.full_name}}">
+                            <div class="text-danger">
+                                {{employee.full_nameError}}</div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Email</label>
+                            <input type="text" class="form-control" name="email" placeholder="Email"
+                                value="{{employee.email}}">
+                            <div class="text-danger">
+                                {{employee.emailError}}</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Indirizzo</label>
+                        <textarea class="form-control" name="address"
+                            placeholder="indirizzo">{{employee.address}}</textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Telefono</label>
+                            <input type="text" class="form-control" name="mobile" placeholder="telefono"
+                                value="{{employee.mobile}}">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Retribuzione</label>
+                            <input type="text" class="form-control" name="salary" placeholder="€"
+                                value="{{employee.salary}}">
+                        </div>
+                    </div>
+                    <div class="form-group float-right my-5">
+                        <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-arrow-down-right-circle-fill"></i></i> Invia</button>
+                        <a class="btn btn-info btn-sm" href="/employee/list"><i class="bi bi-journal-richtext"></i></i> Lista</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
