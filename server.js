@@ -19,8 +19,12 @@ app.set('views', path.join(__dirname, '/views/'));
 app.engine('hbs', exphbs({ extname: 'hbs', defaultLayout: 'mainLayout', layoutsDir: __dirname + '/views/templates/' }));
 app.set('view engine', 'hbs');
 
+
+
+app.get('/', (req, res) => {
+    res.render('index');
+});
+app.use('/employee', empController);
 app.listen(3000, () => {
     console.log('Server in ascolto sulla porta : 3000');
 });
-
-app.use('/employee', empController);
