@@ -4,7 +4,7 @@
     "description": "Demo app just for teaching purposes",
     "main": "server.js",
     "scripts": {
-        "start": "node index.js"
+        "start": "node server.js"
     },
     "keywords": [
         "crud",
